@@ -653,14 +653,17 @@ He is an asset to any organization with combination of managing team members eff
               </div>
               <div class="form-group">
                 <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
+                <input type="text" class="form-control" name="subject" id="message" required>
+                <!-- <textarea class="form-control" name="message" rows="10" required></textarea> -->
               </div>
-              <div class="my-3">
+              <!-- <div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              </div> -->
+              <div class="text-center"><button type="submit" onClick="myFunction()">Send Message</button></div>
+              
+                <!-- <button type="submit">Send Message</button></div> -->
             </form>
           </div>
 
@@ -702,6 +705,33 @@ He is an asset to any organization with combination of managing team members eff
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+
+  <script>
+    function myFunction() {
+    var to = 'shaik.shafi.ur.rahman@gmail.com';
+    var subject = document.getElementById("subject").value;
+    var body = document.getElementById("message").value;
+    var bcc = document.getElementById("email").value;
+
+    if (bcc == "")
+    {
+      alert("Please enter your email address");
+    }
+    else if (subject == "")
+    {
+    alert("Please enter your mail subject");
+    }
+    else if (body == "")
+    {
+    alert("Please enter your Message");
+    }
+   
+    else
+    window.location.href='https://mail.google.com/mail/?view=cm&fs=1&to=' + to + '&su=' + subject + '&body=' + body + '&bcc=' + bcc + '';
+
+    }
+  </script>
 
 </body>
 

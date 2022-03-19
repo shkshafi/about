@@ -33,11 +33,11 @@
   );
   */
 
-  $contact->add_message( $_POST['name'], 'From');
-  $contact->add_message( $_POST['email'], 'Email');
-  $contact->add_message( $_POST['message'], 'Message', 10);
+  // $contact->add_message( $_POST['name'], 'From');
+  // $contact->add_message( $_POST['email'], 'Email');
+  // $contact->add_message( $_POST['message'], 'Message', 10);
 
-  echo $contact->send();
+  // echo $contact->send();
 
 //New Code
 
@@ -53,34 +53,34 @@
 //   $contact->add_message( $_POST['message'], 'Message', 10);
 
   
+header("Location: https://www.google.com");
 
-
-$to = 'shaik.shafi.ur.rahman@gmail.com';
-$subject = $_POST['subject'];
-$from = $_POST['email'];
+// $to = 'shaik.shafi.ur.rahman@gmail.com';
+// $subject = $_POST['subject'];
+// $from = $_POST['email'];
  
 // To send HTML mail, the Content-type header must be set
-$headers  = 'MIME-Version: 1.0' . "\r\n";
-$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+// $headers  = 'MIME-Version: 1.0' . "\r\n";
+// $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
  
 // Create email headers
-$headers .= 'From: '.$from."\r\n".
-    'Reply-To: '.$from."\r\n" .
-    'X-Mailer: PHP/' . phpversion();
+// $headers .= 'From: '.$from."\r\n".
+//     'Reply-To: '.$from."\r\n" .
+//     'X-Mailer: PHP/' . phpversion();
  
 // Compose a simple HTML email message
-$message  = $_POST['name'];
-$message .= $_POST['email'];
+// $message  = $_POST['name'];
+// $message .= $_POST['email'];
 // $message .= '<h1 style="color:#f40;">Hi Jane!</h1>';
 // $message .= '<p style="color:#080;font-size:18px;">Will you marry me?</p>';
 // $message .= '</body></html>';
  
 // Sending email
-if(mail($to, $subject, $message, $headers)){
-    echo 'Your mail has been sent successfully.';
-} else{
-    echo 'Unable to send email. Please try again.';
-}
+// if(mail($to, $subject, $message, $headers)){
+//     echo 'Your mail has been sent successfully.';
+// } else{
+//     echo 'Unable to send email. Please try again.';
+// }
 
 
 
