@@ -41,7 +41,8 @@
           <li><a href="#about" class="nav-link scrollto"><i class="bi bi-person"></i> <span>About</span></a></li>
           <li><a href="#projects" class="nav-link scrollto"><i class="bi bi-cpu"></i> <span>Innovations</span></a></li>
           <li><a href="#skills" class="nav-link scrollto"><i class="bi bi-shield-check"></i> <span>Skills</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bi bi-file-earmark-text"></i> <span>Resume</span></a></li>
+          <li><a href="#resume" class="nav-link scrollto"><i class="bi bi-file-earmark-text"></i> <span>Experience</span></a></li>
+          <li><a href="#education" class="nav-link scrollto"><i class="bi bi-mortarboard"></i> <span>Education</span></a></li>
           <li><a href="#services" class="nav-link scrollto"><i class="bi bi-briefcase"></i> <span>Interests</span></a></li>
           <li><a href="#contact" class="nav-link scrollto"><i class="bi bi-envelope"></i> <span>Contact</span></a></li>
         </ul>
@@ -58,6 +59,7 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">
+    <canvas id="hero-canvas"></canvas>
     <div class="hero-glow-blob"></div>
     <div class="hero-glow-blob-2"></div>
     <div class="hero-container">
@@ -230,6 +232,15 @@
                   <img src="assets/img/mitre.png" alt="MITRE Logo">
                   <span>MITRE</span>
                 </div>
+                <!-- CC (ISC)2 Custom SVG Logo -->
+                <div class="cert-card">
+                  <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M32 2L6 14V30C6 44.8 17.1 58.4 32 62C46.9 58.4 58 44.8 58 30V14L32 2Z" fill="rgba(0, 229, 255, 0.05)" stroke="#00e5ff" stroke-width="2"/>
+                    <text x="32" y="32" fill="#fff" font-family="'Space Grotesk', sans-serif" font-weight="bold" font-size="14" text-anchor="middle">ISC²</text>
+                    <text x="32" y="46" fill="#00ff66" font-family="'Space Grotesk', sans-serif" font-weight="bold" font-size="10" text-anchor="middle">CC</text>
+                  </svg>
+                  <span>CC (ISC)²</span>
+                </div>
               </div>
             </div>
 
@@ -316,9 +327,16 @@
               <li>Secure development lifecycle mitigation plan construction</li>
               <li>Excellent verbal, technical and analytical writing</li>
               <li>API, Mobile (iOS/Android), SAST and DAST checklists</li>
-              <li>Full stack coding (C, C++, C#, JS, Python, PHP)</li>
               <li>Active directory attacks and domain escalation</li>
             </ul>
+
+            <div class="mt-4">
+              <h4 style="color:#fff; font-size:1.05rem; font-family:var(--font-header); margin-bottom:12px;">Secondary Competencies</h4>
+              <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                <span class="badge bg-secondary" style="background: rgba(255, 255, 255, 0.05) !important; border: 1px solid var(--border-color); color: var(--text-secondary); font-family: var(--font-mono); font-size: 0.75rem; padding: 6px 12px; border-radius: 6px;">Web Application Development (Laravel, React)</span>
+                <span class="badge bg-secondary" style="background: rgba(255, 255, 255, 0.05) !important; border: 1px solid var(--border-color); color: var(--text-secondary); font-family: var(--font-mono); font-size: 0.75rem; padding: 6px 12px; border-radius: 6px;">Mobile Application Development (Swift iOS)</span>
+              </div>
+            </div>
           </div>
 
           <div class="skills-category" data-aos="fade-left">
@@ -326,17 +344,17 @@
             <div class="skills-list-grid skills-content">
               <div class="skill-meter-item">
                 <div class="skill-meter-info">
-                  <span class="skill-name">Penetration Testing</span>
-                  <span class="skill-percent">100%</span>
+                  <span class="skill-name">AI Security Automation &amp; Agents</span>
+                  <span class="skill-percent">95%</span>
                 </div>
                 <div class="skill-bar-bg">
-                  <div class="skill-bar-fill" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+                  <div class="skill-bar-fill" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
                 </div>
               </div>
 
               <div class="skill-meter-item">
                 <div class="skill-meter-info">
-                  <span class="skill-name">Kali Linux</span>
+                  <span class="skill-name">Security Leadership</span>
                   <span class="skill-percent">90%</span>
                 </div>
                 <div class="skill-bar-bg">
@@ -346,27 +364,17 @@
 
               <div class="skill-meter-item">
                 <div class="skill-meter-info">
-                  <span class="skill-name">Breach & Attack Simulations (MITRE)</span>
-                  <span class="skill-percent">75%</span>
+                  <span class="skill-name">Capability Building</span>
+                  <span class="skill-percent">85%</span>
                 </div>
                 <div class="skill-bar-bg">
-                  <div class="skill-bar-fill" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+                  <div class="skill-bar-fill" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
                 </div>
               </div>
 
               <div class="skill-meter-item">
                 <div class="skill-meter-info">
-                  <span class="skill-name">AI Security Automation & Agents</span>
-                  <span class="skill-percent">90%</span>
-                </div>
-                <div class="skill-bar-bg">
-                  <div class="skill-bar-fill" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
-                </div>
-              </div>
-
-              <div class="skill-meter-item">
-                <div class="skill-meter-info">
-                  <span class="skill-name">Active Directory</span>
+                  <span class="skill-name">Breach &amp; Attack Simulations (BAS)</span>
                   <span class="skill-percent">80%</span>
                 </div>
                 <div class="skill-bar-bg">
@@ -376,21 +384,31 @@
 
               <div class="skill-meter-item">
                 <div class="skill-meter-info">
-                  <span class="skill-name">Web Development</span>
-                  <span class="skill-percent">60%</span>
+                  <span class="skill-name">Penetration Testing</span>
+                  <span class="skill-percent">75%</span>
                 </div>
                 <div class="skill-bar-bg">
-                  <div class="skill-bar-fill" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+                  <div class="skill-bar-fill" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
                 </div>
               </div>
 
               <div class="skill-meter-item">
                 <div class="skill-meter-info">
-                  <span class="skill-name">Mobile PT & Development</span>
-                  <span class="skill-percent">55%</span>
+                  <span class="skill-name">Kali Linux</span>
+                  <span class="skill-percent">70%</span>
                 </div>
                 <div class="skill-bar-bg">
-                  <div class="skill-bar-fill" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+                  <div class="skill-bar-fill" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-meter-item">
+                <div class="skill-meter-info">
+                  <span class="skill-name">Active Directory</span>
+                  <span class="skill-percent">65%</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
                 </div>
               </div>
             </div>
@@ -403,236 +421,207 @@
     <section id="resume" class="section-bg">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h2>Resume</h2>
-          <p>Chronology of leadership roles and education in advanced cybersecurity operations.</p>
+          <h2>Experience Chronology</h2>
+          <p>Key offensive security leadership roles and technical achievements across global markets.</p>
         </div>
 
-        <div class="timeline-container">
-          <!-- NTT DATA -->
-          <div class="timeline-item" data-aos="fade-up">
-            <div class="timeline-node"></div>
-            <div class="timeline-content">
-              <div class="timeline-header-info">
-                <div>
-                  <h3 class="timeline-role">Senior Manager and Global Capability Lead - Offensive Security</h3>
-                  <span class="timeline-company">NTT DATA, Inc.</span>
+        <div class="row">
+          <!-- Column 1: Present & Recent Work -->
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="timeline-container">
+              <!-- NTT DATA -->
+              <div class="timeline-item">
+                <div class="timeline-node"></div>
+                <div class="timeline-content">
+                  <div class="timeline-header-info">
+                    <div>
+                      <h3 class="timeline-role">Senior Manager and Global Capability Lead - Offensive Security</h3>
+                      <span class="timeline-company">NTT DATA, Inc.</span>
+                    </div>
+                    <span class="timeline-date">Feb 2025 - Present</span>
+                  </div>
+                  <ul class="timeline-body-text">
+                    <li>Lead global offensive security capability focusing on VAPT, Breach & Attack Simulation, and advanced Red Team offerings within NTT DATA’s cloud and security division.</li>
+                    <li>Provide strategic thought leadership to design and deliver innovative offensive security services addressing evolving cyber threats across global markets.</li>
+                    <li>Develop and deploy AI agents enhancing productivity, automating security assessments, and enabling future-proof service delivery for clients.</li>
+                    <li>Coach and mentor global delivery teams, optimizing productivity and ensuring consistent delivery of high-quality results for complex, high-value engagements.</li>
+                    <li>Collaborate with presales and go-to-market teams to drive increased success in RFQ/RFP responses by building custom, client-centric offensive security solutions.</li>
+                    <li>Author and review high-standard Statements of Work (SOW) to ensure service offerings align precisely with client expectations and organizational quality benchmarks.</li>
+                    <li>Act as a global subject matter expert and capability leader, promoting cutting-edge cybersecurity tools, representing the organization at industry forums, and driving the adoption of innovative security practices.</li>
+                    <li>Facilitate knowledge sharing and continuous skill enhancement across teams to sustain excellence and responsiveness in offensive security operations.</li>
+                  </ul>
                 </div>
-                <span class="timeline-date">Feb 2025 - Present</span>
               </div>
-              <ul class="timeline-body-text">
-                <li>Lead global offensive security capability focusing on VAPT, Breach & Attack Simulation, and advanced Red Team offerings within NTT DATA’s cloud and security division.</li>
-                <li>Provide strategic thought leadership to design and deliver innovative offensive security services addressing evolving cyber threats across global markets.</li>
-                <li>Develop and deploy AI agents enhancing productivity, automating security assessments, and enabling future-proof service delivery for clients.</li>
-                <li>Coach and mentor global delivery teams, optimizing productivity and ensuring consistent delivery of high-quality results for complex, high-value engagements.</li>
-                <li>Collaborate with presales and go-to-market teams to drive increased success in RFQ/RFP responses by building custom, client-centric offensive security solutions.</li>
-                <li>Author and review high-standard Statements of Work (SOW) to ensure service offerings align precisely with client expectations and organizational quality benchmarks.</li>
-                <li>Act as a global subject matter expert and capability leader, promoting cutting-edge cybersecurity tools, representing the organization at industry forums, and driving the adoption of innovative security practices.</li>
-                <li>Facilitate knowledge sharing and continuous skill enhancement across teams to sustain excellence and responsiveness in offensive security operations.</li>
-              </ul>
+
+              <!-- Scybers -->
+              <div class="timeline-item">
+                <div class="timeline-node"></div>
+                <div class="timeline-content">
+                  <div class="timeline-header-info">
+                    <div>
+                      <h3 class="timeline-role">Cyber Security Senior Manager &amp; Cyber Security Manager</h3>
+                      <span class="timeline-company">Scybers</span>
+                    </div>
+                    <span class="timeline-date">July 2022 - Jan 2025</span>
+                  </div>
+                  <ul class="timeline-body-text">
+                    <li><strong>Cyber Security Senior Manager (Jan 2024 - Jan 2025):</strong>
+                      <ul>
+                        <li>Lead and supervise advanced offensive security operations, VAPT and Red Teaming.</li>
+                        <li>Stay updated on the latest threats, techniques, and tools for continuous improvement.</li>
+                        <li>Develop tailored strategies for penetration testing and red teaming.</li>
+                        <li>Provide strategic guidance and oversight for the overall security posture.</li>
+                        <li>Lead presales activities, proposals, and SOW authoring.</li>
+                        <li>Mentor the cybersecurity team and drive professional development.</li>
+                        <li>Build strong client relationships and serve as a trusted advisor.</li>
+                        <li>Advocate for cutting-edge security tools for threat monitoring and assessments.</li>
+                        <li>Integrate security automated platforms into pipelines using GitLab and container scanners.</li>
+                        <li>Lead and train penetration testing teams, assisting in CERT-IN and CREST accreditations.</li>
+                        <li>Foster a culture of innovation and excellence within the team.</li>
+                        <li>Manage and increase VAPT sales year-on-year through business initiatives.</li>
+                      </ul>
+                    </li>
+                    <li class="mt-3"><strong>Cyber Security Manager (July 2022 - Jan 2024):</strong>
+                      <ul>
+                        <li>Lead Offensive Security Consulting, specializing in VAPT and Red Teaming.</li>
+                        <li>Oversee the entire consulting portfolio, contributing to defensive security with expertise in MITRE TTPs.</li>
+                        <li>Develop tailored strategies for penetration testing, red teaming, and SOC consulting.</li>
+                        <li>Manage presales proposals, mentoring junior staff, and establishing client relationships.</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- Scybers -->
-          <div class="timeline-item" data-aos="fade-up">
-            <div class="timeline-node"></div>
-            <div class="timeline-content">
-              <div class="timeline-header-info">
-                <div>
-                  <h3 class="timeline-role">Cyber Security Senior Manager &amp; Cyber Security Manager</h3>
-                  <span class="timeline-company">Scybers</span>
+          <!-- Column 2: Historical Experience -->
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="timeline-container">
+              <!-- Virtusa -->
+              <div class="timeline-item">
+                <div class="timeline-node"></div>
+                <div class="timeline-content">
+                  <div class="timeline-header-info">
+                    <div>
+                      <h3 class="timeline-role">Associate Manager &amp; Lead Consultant - Red Team</h3>
+                      <span class="timeline-company">Virtusa</span>
+                    </div>
+                    <span class="timeline-date">Oct 2019 - July 2022</span>
+                  </div>
+                  <ul class="timeline-body-text">
+                    <li><strong>Associate Manager (July 2021 - July 2022):</strong>
+                      <ul>
+                        <li>Assumed leadership in refining and optimizing the Red Team within the organization, assessing defensive tools set by the Blue Team.</li>
+                        <li>Led comprehensive Red Team operations on-premises and across AWS, Azure, and Google Cloud.</li>
+                        <li>Managed end-to-end VAPT, SAST/DAST, and evaluated third-party security vendors.</li>
+                        <li>Mapped attack paths to cover MITRE ATT&CK TTPs and tracked via ServiceNow dashboards.</li>
+                        <li>Supported engagement activities involving Qualys, Nessus, Cymulate, and BitSight.</li>
+                      </ul>
+                    </li>
+                    <li class="mt-3"><strong>Lead Consultant - Red Team (Oct 2019 - June 2021):</strong>
+                      <ul>
+                        <li>Spearheaded the establishment of the internal Red Team within the organization.</li>
+                        <li>Led and executed VAPT, manual Red Teaming, and third-party security audits.</li>
+                        <li>Communicated security posture metrics and findings directly to stakeholders and leadership.</li>
+                      </ul>
+                    </li>
+                  </ul>
                 </div>
-                <span class="timeline-date">July 2022 - Jan 2025</span>
               </div>
-              <ul class="timeline-body-text">
-                <li><strong>Cyber Security Senior Manager (Jan 2024 - Jan 2025):</strong>
-                  <ul>
-                    <li>Lead and supervise advanced offensive security operations, including VAPT and Red Teaming.</li>
-                    <li>Stay updated on the latest cybersecurity threats, techniques, and technologies for continuous improvement.</li>
-                    <li>Develop tailored strategies for penetration testing and red teaming.</li>
-                    <li>Provide strategic guidance and oversight for the organization's overall cybersecurity posture.</li>
-                    <li>Lead presales activities, crafting technology-based proposals for end-to-end cybersecurity management.</li>
-                    <li>Act as a mentor to the cybersecurity team, fostering a positive work environment and professional development.</li>
-                    <li>Build and maintain strong client relationships, serving as a trusted advisor on cybersecurity matters.</li>
-                    <li>Advocate for cutting-edge technology tools to enhance cybersecurity services, particularly in monitoring, management, and incident response.</li>
-                    <li>Act as a liaison between the product development team and clients.</li>
-                    <li>Integrate security tools within CI/CD workflows to ensure continuous monitoring and incident response readiness.</li>
-                    <li>Hands-on experience on integration of tools such as Checkmarx, SonarQube, Docker Scout, etc., into CI/CD pipelines using GitLab platform.</li>
-                    <li>Lead and train a team of highly skilled penetration testers, ensuring certifications in PT and Red Teaming.</li>
-                    <li>Foster a culture of innovation and excellence within the team, promoting continuous skill development.</li>
-                    <li>Play a pivotal role in obtaining and maintaining accreditations such as CERT-IN and CREST.</li>
-                    <li>Provide strategic leadership in developing and implementing cybersecurity policies and procedures.</li>
-                    <li>Represent the organization in industry conferences, forums, and collaborative initiatives.</li>
-                    <li>Drive incident response planning and execution, ensuring effective response to security incidents.</li>
-                    <li>Manage and increase VAPT sales year-on-year through strategic business development initiatives.</li>
-                    <li>Establish and maintain relationships with key clients and partners to enhance VAPT service offerings and market presence.</li>
+
+              <!-- ITMatrix -->
+              <div class="timeline-item">
+                <div class="timeline-node"></div>
+                <div class="timeline-content">
+                  <div class="timeline-header-info">
+                    <div>
+                      <h3 class="timeline-role">Cyber Security Specialist</h3>
+                      <span class="timeline-company">IT MATRIX LLC</span>
+                    </div>
+                    <span class="timeline-date">May 2016 - Oct 2019</span>
+                  </div>
+                  <ul class="timeline-body-text">
+                    <li>In-depth security analysis of software applications, web applications, and network infrastructures.</li>
+                    <li>Demonstrated expertise in OWASP Top 10, CWE Top 25, and secure code review (manual and Veracode).</li>
+                    <li>Utilized scanner tools, Burp, Volatility, Metasploit, Nmap, and Nessus for system auditing.</li>
+                    <li>Identified mobile app security vulnerabilities across iOS, Android, and Windows.</li>
+                    <li>Conducted PCI DSS compliance validation and segmentation audits.</li>
                   </ul>
-                </li>
-                <li class="mt-3"><strong>Cyber Security Manager (July 2022 - Jan 2024):</strong>
-                  <ul>
-                    <li>Lead Offensive Security Consulting, specializing in VAPT and Red Teaming.</li>
-                    <li>Oversee the entire consulting portfolio, contributing to defensive security with expertise in MITRE TTPs.</li>
-                    <li>Develop tailored strategies for penetration testing, red teaming, and SOC consulting, with a focus on proactive threat hunting.</li>
-                    <li>Manage presales activities, crafting technology-based proposals and ensuring end-to-end cybersecurity management.</li>
-                    <li>Serve as a mentor, fostering a positive work environment and building strong client relationships.</li>
-                    <li>Advocate for technology tools to enhance cybersecurity services, emphasizing monitoring and management.</li>
-                    <li>Act as a liaison between the product development team and clients, facilitating real-world use cases for effective SOC operations.</li>
-                    <li>Lead and train a team of highly skilled penetration testers, ensuring certifications in PT and Red Teaming, including OSCP and CRTP.</li>
-                    <li>Assist the organization in obtaining accreditation such as CERT-IN and CREST.</li>
+                </div>
+              </div>
+
+              <!-- Deloitte & Makvin -->
+              <div class="timeline-item">
+                <div class="timeline-node"></div>
+                <div class="timeline-content">
+                  <div class="timeline-header-info">
+                    <div>
+                      <h3 class="timeline-role">Senior Analyst &amp; Strategy Innovation Analyst</h3>
+                      <span class="timeline-company">Deloitte &amp; Makvin</span>
+                    </div>
+                    <span class="timeline-date">April 2009 - Feb 2016</span>
+                  </div>
+                  <ul class="timeline-body-text">
+                    <li><strong>Deloitte (Nov 2011 - Feb 2016):</strong> Remediations, content audits, and reviews with direct interaction with Partners. Led SharePoint migrations (2007 to 2010), custom workflows, and client relationship management in Chile, Portugal, India, and Mexico.</li>
+                    <li class="mt-3"><strong>Makvin Pvt Ltd (April 2009 - Nov 2010):</strong> Trainee. Completed rigorous .NET framework training, SQL Server, CSS, XML, and DLL developments.</li>
                   </ul>
-                </li>
-              </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Education Section ======= -->
+    <section id="education">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Education</h2>
+          <p>Academic credentials and foundational business and technical leadership training.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4" data-aos="fade-up">
+            <div class="soc-widget h-100">
+              <div class="widget-header">
+                <span class="widget-label">POSTGRADUATE</span>
+                <i class="bi bi-mortarboard widget-icon"></i>
+              </div>
+              <h3 style="color:#fff; margin-top: 10px; font-size: 1.35rem;">Masters of Business Administration (MBA)</h3>
+              <p style="color: var(--accent-cyan); font-family: var(--font-mono); font-size: 0.85rem; margin-top: 4px;">Osmania University (2014 - 2017)</p>
+              <p class="widget-desc" style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary);">
+                Major in Marketing Management, Minor in Information Technology. Grounding leadership methodologies, strategic planning, and business analysis.
+              </p>
             </div>
           </div>
 
-          <!-- Virtusa -->
-          <div class="timeline-item" data-aos="fade-up">
-            <div class="timeline-node"></div>
-            <div class="timeline-content">
-              <div class="timeline-header-info">
-                <div>
-                  <h3 class="timeline-role">Associate Manager &amp; Lead Consultant - Red Team</h3>
-                  <span class="timeline-company">Virtusa</span>
-                </div>
-                <span class="timeline-date">Oct 2019 - July 2022</span>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="soc-widget h-100">
+              <div class="widget-header">
+                <span class="widget-label">UNDERGRADUATE</span>
+                <i class="bi bi-book widget-icon"></i>
               </div>
-              <ul class="timeline-body-text">
-                <li><strong>Associate Manager (July 2021 - July 2022):</strong>
-                  <ul>
-                    <li>Assumed leadership in refining and optimizing the Red Team within the organization, continuously assessing the effectiveness of defensive mechanisms implemented by the Blue Team, and implementing strategic improvements as needed.</li>
-                    <li>Led a team in the execution of comprehensive Red Team activities, overseeing vulnerability assessments across diverse platforms, including on-premises, AWS, Azure, and Google Cloud servers. Employed a sophisticated blend of automated tools and manual techniques to ensure robust security testing.</li>
-                    <li>Managed end-to-end activities related to Vulnerability Assessment & Penetration Testing (VAPT), Secure Code Review (SAST/DAST), and evaluated third-party PT & Red Team vendors.</li>
-                    <li>Developed and executed a strategic plan to cover MITRE ATT&CK Tactics/Techniques and Procedures (TTPs) across the infrastructure.</li>
-                    <li>Provided essential support for ongoing engagement activities involving Qualys, Nessus, Cymulate, BitSight, fostering a collaborative environment among team members.</li>
-                    <li>Delivered clear and concise communication of technical findings to leadership, utilizing a risk-based approach.</li>
-                    <li>Collaborated with stakeholders to ensure the timely closure of Red Team findings, aligning with agreed-upon Service Level Agreements (SLAs).</li>
-                    <li>Contributed to the strategic planning and decision-making processes within the Threat Vulnerability Management Team.</li>
-                  </ul>
-                </li>
-                <li class="mt-3"><strong>Lead Consultant - Red Team (Oct 2019 - June 2021):</strong>
-                  <ul>
-                    <li>Spearheaded the establishment of a Red Team within the organization, evaluating the effectiveness of defensive mechanisms set up by the Blue Team.</li>
-                    <li>Held accountable for leading and executing Red Team activities, including vulnerability assessments across diverse platforms such as on-premises, AWS, Azure, and Google Cloud servers.</li>
-                    <li>Executed Vulnerability Assessment & Penetration Testing (VAPT), Secure Code Review (SAST/DAST), and assessed potential third-party PT & Red Team vendors.</li>
-                    <li>Formulated a strategic plan to cover MITRE ATT&CK Tactics/Techniques and Procedures (TTPs) across the infrastructure, identifying potential gaps and tracking through ServiceNow.</li>
-                    <li>Supported ongoing engagement activities in Qualys, Nessus, Cymulate, BitSight.</li>
-                    <li>Effectively communicated findings to leadership using a risk-based approach.</li>
-                    <li>Collaborated with stakeholders to ensure the timely closure of findings within SLAs.</li>
-                    <li>Offered guidance and mentorship to junior engineers, maintaining high standards.</li>
-                  </ul>
-                </li>
-              </ul>
+              <h3 style="color:#fff; margin-top: 10px; font-size: 1.35rem;">Bachelor of Technology (B.Tech)</h3>
+              <p style="color: var(--accent-green); font-family: var(--font-mono); font-size: 0.85rem; margin-top: 4px;">Jawaharlal Nehru Technological University (2006 - 2010)</p>
+              <p class="widget-desc" style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary);">
+                Degree in Information Technology Engineering. Foundational computer systems engineering, network design, algorithms, and application development.
+              </p>
             </div>
           </div>
 
-          <!-- ITMatrix -->
-          <div class="timeline-item" data-aos="fade-up">
-            <div class="timeline-node"></div>
-            <div class="timeline-content">
-              <div class="timeline-header-info">
-                <div>
-                  <h3 class="timeline-role">Cyber Security Specialist</h3>
-                  <span class="timeline-company">IT MATRIX LLC</span>
-                </div>
-                <span class="timeline-date">May 2016 - Oct 2019</span>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="soc-widget h-100">
+              <div class="widget-header">
+                <span class="widget-label">SECONDARY</span>
+                <i class="bi bi-award widget-icon"></i>
               </div>
-              <ul class="timeline-body-text">
-                <li>Conducting in-depth security analyses of software applications based on project requirements.</li>
-                <li>Demonstrating substantial expertise in web application attacks and defense strategies, encompassing knowledge of OWASP Top 10 and CWE Top 25 (SQL injection, XSS, CSRF, DoS, logic flaws, API attacks, etc.).</li>
-                <li>Conducting secure code reviews both manually and using automated tools like Veracode.</li>
-                <li>Utilizing application security tools, including web application security scanners, static code analysis, and vulnerability scanners.</li>
-                <li>Applying penetration testing techniques with tools such as Nessus, Burp, Volatility Framework, Metasploit, etc.</li>
-                <li>Executing penetration tests on client networks to uncover security vulnerabilities.</li>
-                <li>Validating client applications, conducting in-depth code analyses from a security perspective, and proposing mitigation strategies.</li>
-                <li>Identifying critical system security loopholes through comprehensive scanning with tools like Nmap, Nessus, etc.</li>
-                <li>Identifying security vulnerabilities in mobile applications across various platforms (iOS/Android/Windows).</li>
-                <li>Formulating responses for Request for Proposals (RFPs) for prospective clients and providing quotations for services/skills.</li>
-                <li>Conducting PCI DSS compliance validation alongside Vulnerability Assessment and implementing Segmentation controls.</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Deloitte -->
-          <div class="timeline-item" data-aos="fade-up">
-            <div class="timeline-node"></div>
-            <div class="timeline-content">
-              <div class="timeline-header-info">
-                <div>
-                  <h3 class="timeline-role">Senior Analyst &amp; Strategy Business &amp; Innovation Analyst</h3>
-                  <span class="timeline-company">Deloitte</span>
-                </div>
-                <span class="timeline-date">Nov 2011 - Feb 2016</span>
-              </div>
-              <ul class="timeline-body-text">
-                <li><strong>Senior Analyst (Sep 2015 - Feb 2016):</strong>
-                  <ul>
-                    <li>Oversight of high-level content management updates, remediations, and reviews, ensuring alignment with organizational objectives through direct engagement with Directors and Partners.</li>
-                    <li>Facilitation of weekly team calls to maintain open communication and keep the US counterpart informed.</li>
-                    <li>Assistance in developing a comprehensive training plan for new hires.</li>
-                    <li>Active participation in senior analyst focus group discussions.</li>
-                    <li>Provision of mentorship and guidance to new hires through on-the-job training.</li>
-                    <li>Introduction of new modules in the SharePoint tracking site, showcasing technological proficiency.</li>
-                  </ul>
-                </li>
-                <li class="mt-3"><strong>Strategy Business &amp; Innovation Analyst (July 2012 - Aug 2015):</strong>
-                  <ul>
-                    <li>Accountable for content management within the 'Deloitte Audit' domain for practitioners.</li>
-                    <li>Led project management and owned individual client relationships in Chile, India, Portugal, and Mexico.</li>
-                    <li>Oversaw end-to-end service delivery, ensuring high-quality content for clients.</li>
-                    <li>Engaged with clients to assess qualifications, gather requirements, and presented findings.</li>
-                    <li>Utilized CMS tools (Xmetal, EMS, web applications) for efficient content management.</li>
-                  </ul>
-                </li>
-                <li class="mt-3"><strong>SharePoint Consultant (Nov 2011 - June 2012):</strong>
-                  <ul>
-                    <li>Managed content using SharePoint 2010 Solution, overseeing the organization and accessibility of information.</li>
-                    <li>Successfully migrated critical content from the SharePoint 2007 platform to SharePoint 2010.</li>
-                    <li>Implemented a new layout using HTML for various content sections.</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Makvin -->
-          <div class="timeline-item" data-aos="fade-up">
-            <div class="timeline-node"></div>
-            <div class="timeline-content">
-              <div class="timeline-header-info">
-                <div>
-                  <h3 class="timeline-role">Trainee</h3>
-                  <span class="timeline-company">Makvin Pvt Ltd</span>
-                </div>
-                <span class="timeline-date">April 2009 - Nov 2010</span>
-              </div>
-              <ul class="timeline-body-text">
-                <li>Completed rigorous .NET training, including SQL Server 2005, AJAX, CSS, XML, and DLLs.</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Education Section -->
-          <div class="timeline-item" data-aos="fade-up">
-            <div class="timeline-node"></div>
-            <div class="timeline-content">
-              <div class="timeline-header-info">
-                <div>
-                  <h3 class="timeline-role">Education</h3>
-                  <span class="timeline-company">Osmania University &amp; JNTU</span>
-                </div>
-              </div>
-              <ul class="timeline-body-text">
-                <li>
-                  <strong>Masters of Business Administration (MBA)</strong> (2014 - 2017) - Osmania University<br>
-                  <span class="text-muted">Marketing/Marketing Management, General</span>
-                </li>
-                <li>
-                  <strong>Bachelor of Information Technology Engineering (B.Tech)</strong> (2006 - 2010) - Jawaharlal Nehru Technological University<br>
-                  <span class="text-muted">Information Technology</span>
-                </li>
-                <li>
-                  <strong>Intermediate Education, M.P.C</strong> (2004 - 2006) - Board of Secondary Education, Telangana (BSET)<br>
-                </li>
-              </ul>
+              <h3 style="color:#fff; margin-top: 10px; font-size: 1.35rem;">Intermediate Education</h3>
+              <p style="color: var(--accent-cyan); font-family: var(--font-mono); font-size: 0.85rem; margin-top: 4px;">Board of Secondary Education, Telangana (2004 - 2006)</p>
+              <p class="widget-desc" style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary);">
+                M.P.C (Mathematics, Physics, Chemistry) specialization.
+              </p>
             </div>
           </div>
         </div>
@@ -640,7 +629,7 @@
     </section>
 
     <!-- ======= Services / Interests Section ======= -->
-    <section id="services">
+    <section id="services" class="section-bg">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
           <h2>Direct Engagement Areas</h2>
@@ -700,7 +689,7 @@
     </section>
 
     <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="section-bg">
+    <section id="testimonials">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
           <h2>LinkedIn Recommendations</h2>
@@ -766,7 +755,7 @@
     </section>
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact">
+    <section id="contact" class="section-bg">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
           <h2>Secure Transmission Node</h2>
@@ -819,8 +808,11 @@
       <div class="copyright">
         &copy; <span>Shafi Ur Rahman</span>. All rights reserved.
       </div>
-      <div class="credits">
-        Secured Node | Redesigned for Premium Experience
+      <div class="footer-socials mt-3" style="display:flex; justify-content:center; gap:20px; font-size:1.4rem;">
+        <a href="https://www.linkedin.com/in/shkshafi" target="_blank" style="color:var(--text-secondary);"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://github.com/shkshafi" target="_blank" style="color:var(--text-secondary);"><i class="bx bxl-github"></i></a>
+        <a href="https://twitter.com/shkshafi" target="_blank" style="color:var(--text-secondary);"><i class="bx bxl-twitter"></i></a>
+        <a href="https://www.facebook.com/shkshafi/" target="_blank" style="color:var(--text-secondary);"><i class="bx bxl-facebook"></i></a>
       </div>
     </div>
   </footer>
