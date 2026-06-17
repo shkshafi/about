@@ -1,8 +1,5 @@
 /**
-* Template Name: iPortfolio - v3.7.0
-* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
+* Main JavaScript for Cybersecurity Portfolio
 */
 (function() {
   "use strict";
@@ -38,6 +35,22 @@
    */
   const onscroll = (el, listener) => {
     el.addEventListener('scroll', listener)
+  }
+
+  /**
+   * Toggle header-scrolled class to #header when page is scrolled
+   */
+  let selectHeader = select('#header')
+  if (selectHeader) {
+    const headerScrolled = () => {
+      if (window.scrollY > 50) {
+        selectHeader.classList.add('header-scrolled')
+      } else {
+        selectHeader.classList.remove('header-scrolled')
+      }
+    }
+    window.addEventListener('load', headerScrolled)
+    onscroll(document, headerScrolled)
   }
 
   /**
@@ -97,7 +110,7 @@
   })
 
   /**
-   * Scrool with ofset on links with a class name .scrollto
+   * Scroll with offset on links with a class name .scrollto
    */
   on('click', '.scrollto', function(e) {
     if (select(this.hash)) {
@@ -115,7 +128,7 @@
   }, true)
 
   /**
-   * Scroll with ofset on page load with hash links in the url
+   * Scroll with offset on page load with hash links in the url
    */
   window.addEventListener('load', () => {
     if (window.location.hash) {
@@ -135,82 +148,28 @@
     new Typed('.typed', {
       strings: typed_strings,
       loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
+      typeSpeed: 70,
+      backSpeed: 35,
       backDelay: 2000
     });
   }
 
   /**
-   * Skills animation
+   * Skills animation using Waypoint
    */
-  let skilsContent = select('.skills-content');
-  if (skilsContent) {
+  let skillsContent = select('.skills-content');
+  if (skillsContent) {
     new Waypoint({
-      element: skilsContent,
+      element: skillsContent,
       offset: '80%',
       handler: function(direction) {
-        let progress = select('.progress .progress-bar', true);
+        let progress = select('.skill-bar-fill', true);
         progress.forEach((el) => {
           el.style.width = el.getAttribute('aria-valuenow') + '%'
         });
       }
     })
   }
-
-  /**
-   * Porfolio isotope and filter
-   */
-  window.addEventListener('load', () => {
-    let portfolioContainer = select('.portfolio-container');
-    if (portfolioContainer) {
-      let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.portfolio-item'
-      });
-
-      let portfolioFilters = select('#portfolio-flters li', true);
-
-      on('click', '#portfolio-flters li', function(e) {
-        e.preventDefault();
-        portfolioFilters.forEach(function(el) {
-          el.classList.remove('filter-active');
-        });
-        this.classList.add('filter-active');
-
-        portfolioIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        portfolioIsotope.on('arrangeComplete', function() {
-          AOS.refresh()
-        });
-      }, true);
-    }
-
-  });
-
-  /**
-   * Initiate portfolio lightbox 
-   */
-  const portfolioLightbox = GLightbox({
-    selector: '.portfolio-lightbox'
-  });
-
-  /**
-   * Portfolio details slider
-   */
-  new Swiper('.portfolio-details-slider', {
-    speed: 400,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
-  });
 
   /**
    * Testimonials slider
@@ -222,7 +181,7 @@
       delay: 5000,
       disableOnInteraction: false
     },
-    slidesPerView: 'auto',
+    slidesPerView: 1,
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
@@ -233,7 +192,10 @@
         slidesPerView: 1,
         spaceBetween: 20
       },
-
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
       1200: {
         slidesPerView: 3,
         spaceBetween: 20
@@ -242,11 +204,11 @@
   });
 
   /**
-   * Animation on scroll
+   * Animation on scroll (AOS)
    */
   window.addEventListener('load', () => {
     AOS.init({
-      duration: 1000,
+      duration: 800,
       easing: 'ease-in-out',
       once: true,
       mirror: false
