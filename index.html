@@ -115,62 +115,64 @@
 
   <main id="main">
 
-    <!-- ======= Facts / SOC Dashboard Section ======= -->
+    <!-- ======= Verified Credentials & CVE Section ======= -->
     <section id="facts" class="section-bg">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h2>Credentials &amp; Impact Metrics</h2>
-          <p>Key highlights representing experience, capabilities, and validated industry impact.</p>
+          <h2>Credentials &amp; Disclosures</h2>
+          <p>Validated professional certifications and registered security vulnerabilities.</p>
         </div>
 
-        <div class="soc-dashboard-grid">
-          <div class="soc-widget">
-            <div class="widget-header">
-              <span class="widget-label">SYSTEMS_INTEGRATION</span>
-              <i class="bi bi-shield-fill-check widget-icon"></i>
+        <div class="credentials-cve-row">
+          <!-- Certifications (Left Column) -->
+          <div class="certs-wrapper">
+            <h3 class="subsection-title"><i class="bi bi-patch-check-fill"></i> Verified Certifications</h3>
+            <div class="certs-single-row">
+              <div class="cert-item-card">
+                <img src="assets/img/oscp.svg" alt="OSCP Logo">
+                <span>OSCP</span>
+              </div>
+              <div class="cert-item-card">
+                <img src="assets/img/cism.svg" alt="CISM Logo">
+                <span>CISM</span>
+              </div>
+              <div class="cert-item-card">
+                <img src="assets/img/crtp.png" alt="CRTP Logo">
+                <span>CRTP</span>
+              </div>
+              <div class="cert-item-card">
+                <img src="assets/img/mitre.png" alt="MITRE Logo">
+                <span>MITRE</span>
+              </div>
+              <div class="cert-item-card">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M32 2L6 14V30C6 44.8 17.1 58.4 32 62C46.9 58.4 58 44.8 58 30V14L32 2Z" fill="rgba(0, 229, 255, 0.05)" stroke="#00e5ff" stroke-width="2"/>
+                  <text x="32" y="32" fill="#fff" font-family="'Space Grotesk', sans-serif" font-weight="bold" font-size="14" text-anchor="middle">ISC²</text>
+                  <text x="32" y="46" fill="#00ff66" font-family="'Space Grotesk', sans-serif" font-weight="bold" font-size="10" text-anchor="middle">CC</text>
+                </svg>
+                <span>CC (ISC)²</span>
+              </div>
             </div>
-            <div class="widget-value-container">
-              <span class="widget-value purecounter" data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1">0</span>
-              <span class="widget-unit">+</span>
-            </div>
-            <p class="widget-desc">Happy clients served across the globe with comprehensive security services.</p>
           </div>
 
-          <div class="soc-widget">
-            <div class="widget-header">
-              <span class="widget-label">THREAT_HUNTS</span>
-              <i class="bi bi-activity widget-icon"></i>
+          <!-- CVE Details Card (Right Column) -->
+          <div class="cve-wrapper">
+            <h3 class="subsection-title"><i class="bi bi-bug-fill"></i> Vulnerability Disclosure</h3>
+            <div class="cve-detail-card">
+              <div class="cve-card-header">
+                <span class="cve-tag">CVE-2022-26333</span>
+                <span class="cve-severity-badge">CVSS 7.8</span>
+              </div>
+              <div class="cve-card-body">
+                <h4 class="cve-title">Akamai EAA Client Privilege Escalation</h4>
+                <p class="cve-desc">Local privilege escalation vulnerability discovered in Akamai Enterprise Application Access (EAA) Client allowing arbitrary code execution with elevated privileges.</p>
+              </div>
+              <div class="cve-card-footer">
+                <a href="https://www.akamai.com/blog/news/eaa-client-escalation-of-privilege-vulnerability" target="_blank" class="cve-link-btn">
+                  <span>View Exploit Details</span> <i class="bi bi-box-arrow-up-right"></i>
+                </a>
+              </div>
             </div>
-            <div class="widget-value-container">
-              <span class="widget-value purecounter" data-purecounter-start="0" data-purecounter-end="300" data-purecounter-duration="1">0</span>
-              <span class="widget-unit">+</span>
-            </div>
-            <p class="widget-desc">Engagements concluded, spanning both internal & external security assessments.</p>
-          </div>
-
-          <div class="soc-widget">
-            <div class="widget-header">
-              <span class="widget-label">CREDENTIALS_VERIFIED</span>
-              <i class="bi bi-patch-check-fill widget-icon"></i>
-            </div>
-            <div class="widget-value-container">
-              <span class="widget-value purecounter" data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1">0</span>
-            </div>
-            <p class="widget-desc">Professional certifications: CISM, OSCP, CRTP, Foundations of MITRE.</p>
-          </div>
-
-          <div class="soc-widget">
-            <div class="widget-header">
-              <span class="widget-label">CVE_EXPLOITS</span>
-              <i class="bi bi-bug-fill widget-icon"></i>
-            </div>
-            <div class="widget-value-container">
-              <span class="widget-value purecounter" data-purecounter-start="0" data-purecounter-end="1" data-purecounter-duration="1">0</span>
-            </div>
-            <p class="widget-desc">CVE registered for Akamai privilege escalation.</p>
-            <a href="https://www.akamai.com/blog/news/eaa-client-escalation-of-privilege-vulnerability" target="_blank" class="widget-cve-link">
-              View Exploit Details <i class="bi bi-box-arrow-up-right"></i>
-            </a>
           </div>
         </div>
       </div>
@@ -213,36 +215,7 @@
               For community resources, tools, and practical learning, visit my knowledge hub at <a href="http://www.offensivesecuritylabs.com" target="_blank">Offensive Security Labs</a>.
             </p>
 
-            <div class="certs-container">
-              <h4 class="certs-title"><i class="bi bi-award-fill"></i> Verified Credentials</h4>
-              <div class="certs-grid">
-                <div class="cert-card">
-                  <img src="assets/img/oscp.svg" alt="OSCP Logo">
-                  <span>OSCP</span>
-                </div>
-                <div class="cert-card">
-                  <img src="assets/img/cism.svg" alt="CISM Logo">
-                  <span>CISM</span>
-                </div>
-                <div class="cert-card">
-                  <img src="assets/img/crtp.png" alt="CRTP Logo">
-                  <span>CRTP</span>
-                </div>
-                <div class="cert-card">
-                  <img src="assets/img/mitre.png" alt="MITRE Logo">
-                  <span>MITRE</span>
-                </div>
-                <!-- CC (ISC)2 Custom SVG Logo -->
-                <div class="cert-card">
-                  <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M32 2L6 14V30C6 44.8 17.1 58.4 32 62C46.9 58.4 58 44.8 58 30V14L32 2Z" fill="rgba(0, 229, 255, 0.05)" stroke="#00e5ff" stroke-width="2"/>
-                    <text x="32" y="32" fill="#fff" font-family="'Space Grotesk', sans-serif" font-weight="bold" font-size="14" text-anchor="middle">ISC²</text>
-                    <text x="32" y="46" fill="#00ff66" font-family="'Space Grotesk', sans-serif" font-weight="bold" font-size="10" text-anchor="middle">CC</text>
-                  </svg>
-                  <span>CC (ISC)²</span>
-                </div>
-              </div>
-            </div>
+
 
             <ul class="about-meta">
               <li><i class="bi font-bold bi-chevron-right"></i> <strong>Top Skills:</strong> <span>Artificial Intelligence (AI), Network Security, Information Security Analysis</span></li>
@@ -647,10 +620,10 @@
 
           <div class="service-card" data-aos="fade-up" data-aos-delay="100">
             <div class="service-icon-wrapper">
-              <i class="bi bi-code-slash"></i>
+              <i class="bi bi-people-fill"></i>
             </div>
-            <h4 class="service-title">Web Solutions</h4>
-            <p class="service-desc">Static/dynamic web applications for your business, converting static site to CMS solution, web development using latest front-end and back-end technologies.</p>
+            <h4 class="service-title">Security Leadership</h4>
+            <p class="service-desc">Lead global offensive security capabilities, coaching and mentoring high-performing delivery teams to optimize productivity and deliver top-tier client results.</p>
           </div>
 
           <div class="service-card" data-aos="fade-up" data-aos-delay="200">
