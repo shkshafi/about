@@ -44,7 +44,14 @@
   if (canvas) {
     const ctx = canvas.getContext('2d');
     let particles = [];
-    const particleCount = 60;
+    const particleCount = 120;
+    
+    // Mouse hover coordinates tracker
+    let mouse = {
+      x: null,
+      y: null,
+      radius: 100 // Radius of pointer repulsion
+    };
     
     const resizeCanvas = () => {
       canvas.width = canvas.offsetWidth;
@@ -53,6 +60,18 @@
     
     window.addEventListener('resize', resizeCanvas);
     resizeCanvas();
+    
+    // Track mouse coordinate offsets relative to canvas
+    window.addEventListener('mousemove', (e) => {
+      const rect = canvas.getBoundingClientRect();
+      mouse.x = e.clientX - rect.left;
+      mouse.y = e.clientY - rect.top;
+    });
+    
+    window.addEventListener('mouseleave', () => {
+      mouse.x = null;
+      mouse.y = null;
+    });
     
     class Particle {
       constructor() {
@@ -64,17 +83,48 @@
       }
       
       update() {
+        // Disperse particles away from mouse
+        if (mouse.x !== null && mouse.y !== null) {
+          const dx = this.x - mouse.x;
+          const dy = this.y - mouse.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          if (distance < mouse.radius) {
+            const force = (mouse.radius - distance) / mouse.radius;
+            // Disperse factor: push particles radially outwards
+            const pushX = (dx / distance) * force * 1.6;
+            const pushY = (dy / distance) * force * 1.6;
+            
+            this.x += pushX;
+            this.y += pushY;
+          }
+        }
+        
         this.x += this.vx;
         this.y += this.vy;
         
-        if (this.x < 0 || this.x > canvas.width) this.vx = -this.vx;
-        if (this.y < 0 || this.y > canvas.height) this.vy = -this.vy;
+        // Bounce off canvas edges
+        if (this.x < 0) {
+          this.x = 0;
+          this.vx = -this.vx;
+        } else if (this.x > canvas.width) {
+          this.x = canvas.width;
+          this.vx = -this.vx;
+        }
+        
+        if (this.y < 0) {
+          this.y = 0;
+          this.vy = -this.vy;
+        } else if (this.y > canvas.height) {
+          this.y = canvas.height;
+          this.vy = -this.vy;
+        }
       }
       
       draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(0, 229, 255, 0.15)';
+        ctx.fillStyle = 'rgba(0, 245, 212, 0.15)';
         ctx.fill();
       }
     }
@@ -86,7 +136,7 @@
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
-      // Draw grid drift lines (subtle cyber aesthetic)
+      // Draw grid drift lines (subtle HUD mesh)
       ctx.strokeStyle = 'rgba(255, 255, 255, 0.005)';
       ctx.lineWidth = 1;
       const gridSize = 80;
@@ -109,7 +159,7 @@
         p.draw();
       });
       
-      // Connect particles
+      // Connect adjacent nodes
       ctx.lineWidth = 0.5;
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
@@ -117,8 +167,8 @@
           const dy = particles[i].y - particles[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
           
-          if (dist < 120) {
-            const alpha = (1 - dist / 120) * 0.06;
+          if (dist < 100) {
+            const alpha = (1 - dist / 100) * 0.08;
             ctx.strokeStyle = `rgba(0, 180, 216, ${alpha})`;
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
@@ -156,14 +206,29 @@
   let navbarlinks = select('#navbar .scrollto', true)
   const navbarlinksActive = () => {
     let position = window.scrollY + 200
+    // Check if the user reached the bottom of the page (to force highlight Contact)
+    let isAtBottom = (window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 80)
+    
     navbarlinks.forEach(navbarlink => {
       if (!navbarlink.hash) return
       let section = select(navbarlink.hash)
       if (!section) return
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+      
+      let shouldBeActive = false
+      if (isAtBottom) {
+        shouldBeActive = (navbarlink.hash === '#contact')
+      } else {
+        shouldBeActive = (position >= section.offsetTop && position < (section.offsetTop + section.offsetHeight))
+      }
+      
+      if (shouldBeActive) {
         navbarlink.classList.add('active')
+        let sideDot = select(`#section-navigator a[href="${navbarlink.hash}"]`)
+        if (sideDot) sideDot.classList.add('active')
       } else {
         navbarlink.classList.remove('active')
+        let sideDot = select(`#section-navigator a[href="${navbarlink.hash}"]`)
+        if (sideDot) sideDot.classList.remove('active')
       }
     })
   }
@@ -174,7 +239,9 @@
    * Scrolls to an element with header offset
    */
   const scrollto = (el) => {
-    let elementPos = select(el).offsetTop
+    let headerOffset = 80;
+    if (el === '#hero') headerOffset = 0;
+    let elementPos = select(el).offsetTop - headerOffset
     window.scrollTo({
       top: elementPos,
       behavior: 'smooth'
