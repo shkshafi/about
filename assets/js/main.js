@@ -119,7 +119,7 @@
           
           if (dist < 120) {
             const alpha = (1 - dist / 120) * 0.06;
-            ctx.strokeStyle = `rgba(0, 255, 102, ${alpha})`;
+            ctx.strokeStyle = `rgba(0, 180, 216, ${alpha})`;
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
